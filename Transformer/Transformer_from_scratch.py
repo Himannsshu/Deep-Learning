@@ -176,7 +176,7 @@ class Transformer(nn.Module):
     return self.projection_layer(x)
 
 def build_transformer(src_vocab_size:int,tgt_vocab_size:int,src_seq_len:int,tgt_seq_len:int,d_model:int=512,N:int=6,h:int=8,dropout:float=0.1,d_ff=2048) ->Transformer:
-  src_embed=InputEmbedding(d_model,src_vocab_size) #
+  src_embed=InputEmbedding(d_model,src_vocab_size) 
   tgt_embed=InputEmbedding(d_model,tgt_vocab_size)
   src_pos=PositionalEmbedding(d_model,src_seq_len,dropout)
   tgt_pos=PositionalEmbedding(d_model,tgt_seq_len,dropout)
